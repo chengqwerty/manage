@@ -21,13 +21,13 @@ public class SecurityConfig {
             @Override
             protected void configure(HttpSecurity http) throws Exception {
                 super.configure(http);
-//                http.formLogin().successHandler(new CustomAuthenticationSuccessHandler()).failureHandler(new CustomAuthenticationFailureHandler())
-//                        .and()
-//                        .exceptionHandling().authenticationEntryPoint(new CustomAuthenticationEntryPoint())
-//                        .and()
-//                        .logout().logoutSuccessHandler(new CustomLogoutSuccessHandler())
-//                        .and()
-//                        .csrf().disable(); // 暂时禁用，后面研究清楚了再启用
+                http.formLogin().successHandler(new CustomAuthenticationSuccessHandler()).failureHandler(new CustomAuthenticationFailureHandler())
+                        .and()
+                        .exceptionHandling().authenticationEntryPoint(new CustomAuthenticationEntryPoint())
+                        .and()
+                        .logout().logoutSuccessHandler(new CustomLogoutSuccessHandler())
+                        .and()
+                        .csrf().disable(); // 暂时禁用，后面研究清楚了再启用
             }
         };
     }
